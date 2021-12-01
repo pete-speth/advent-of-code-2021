@@ -1,0 +1,14 @@
+{
+  "name": "advent-of-code-2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "bin": {
+    "aoc": "./index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
