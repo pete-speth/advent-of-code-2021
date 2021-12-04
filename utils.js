@@ -1,9 +1,14 @@
-const fs = require("fs")
+const fs = require("fs");
 
 module.exports = {
-    parseInputToList: (filepath, parseFunction) => {
-        return fs.readFileSync(filepath, "utf8")
-            .split("\n")
-            .map(line => parseFunction(line))
-    }
-}
+  parseInputToLines: (filepath) => {
+    return fs.readFileSync(filepath, "utf8").split("\n");
+  },
+
+  parseInputToList: (filepath, parseFunction) => {
+    return fs
+      .readFileSync(filepath, "utf8")
+      .split("\n")
+      .map((line) => parseFunction(line));
+  },
+};
