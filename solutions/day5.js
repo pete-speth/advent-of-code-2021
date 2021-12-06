@@ -2,7 +2,10 @@ const utils = require("../utils.js");
 
 module.exports = {
   solve: (inputFilePath) => {
-    const lineObjs = utils.parseInputToList(inputFilePath, parseLineObject);
+    const lineObjs = utils.parseInputLinesToList(
+      inputFilePath,
+      parseLineObject
+    );
 
     const floorMap = buildMap(lineObjs);
     const floorMapDiagonals = buildMap(lineObjs, true);

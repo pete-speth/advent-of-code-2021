@@ -2,7 +2,7 @@ const utils = require("../utils.js");
 
 module.exports = {
   solve: (inputFilePath) => {
-    const booleanArrays = utils.parseInputToList(
+    const booleanArrays = utils.parseInputLinesToList(
       inputFilePath,
       parseToIntArray
     );

@@ -5,10 +5,17 @@ module.exports = {
     return fs.readFileSync(filepath, "utf8").split("\n");
   },
 
-  parseInputToList: (filepath, parseFunction) => {
+  parseInputLinesToList: (filepath, parseFunction) => {
     return fs
       .readFileSync(filepath, "utf8")
       .split("\n")
       .map((line) => parseFunction(line));
+  },
+
+  parseCommaSeparatedInputToList: (filepath, parseFunction = (i) => i) => {
+    return fs
+      .readFileSync(filepath, "utf8")
+      .split(",")
+      .map((el) => parseFunction(el));
   },
 };

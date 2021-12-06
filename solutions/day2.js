@@ -2,7 +2,7 @@ const utils = require("../utils.js");
 
 module.exports = {
   solve: (inputFilePath) => {
-    const commands = utils.parseInputToList(inputFilePath, parseCommand);
+    const commands = utils.parseInputLinesToList(inputFilePath, parseCommand);
     return [simplePositionCalc(commands), calcPositionWithAim(commands)];
   },
 };
