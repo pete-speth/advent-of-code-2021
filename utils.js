@@ -5,7 +5,7 @@ module.exports = {
     return fs.readFileSync(filepath, "utf8").split("\n");
   },
 
-  parseInputLinesToList: (filepath, parseFunction) => {
+  parseInputLinesToList: (filepath, parseFunction = (i) => i) => {
     return fs
       .readFileSync(filepath, "utf8")
       .split("\n")
